@@ -1,10 +1,9 @@
-import react from "react"
 import "tailwindcss/tailwind.css"
 import {SinglePost, Post, Project, Home, About, Navbar} from './components/index'
-import {BrowserRouter, BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
     <Navbar/>
     <Switch>
       <Route component={Home} path="/" exact/>
@@ -13,7 +12,7 @@ function App() {
       <Route component={Post} path="/post" />
       <Route component={Project} path="/project" />
       </Switch>
-    </BrowserRouter>
+    </Router>
 
   );
 }
